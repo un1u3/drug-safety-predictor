@@ -48,4 +48,13 @@ The current model has **limited ability to correctly identify hospitalized patie
 
 ## Running the Code
 
-1. **Tr**
+1. **Train model:**
+
+```python
+# Train your model here
+model.fit(X_train, y_train)
+
+# Save model and features
+import joblib
+joblib.dump(model, 'drug_safety_predictor_model.pkl')
+joblib.dump(X_train.columns.tolist(), 'feature_columns.pkl')
